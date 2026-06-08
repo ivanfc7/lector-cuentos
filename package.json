@@ -17,5 +17,11 @@
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^6.4.4",
     "sharp": "^0.34.3"
-  }
+  },
+  "description": "```sh npm create astro@latest -- --template blog ```",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
