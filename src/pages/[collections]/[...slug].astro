@@ -1,0 +1,33 @@
+---
+import { getCollection, render } from 'astro:content';
+import BlogPost from '../../layouts/publicacion.astro';
+
+// 1. Generar las rutas para AMBAS colecciones dinámicamente
+export async function getStaticPaths() {
+  const cuentos = await getCollection('cuento');
+  const poemas = await getCollection('poema');
+
+  // Mapeamos los cuentos
+  const rutasCuentos = cuentos.map(post => ({
+    params: { collections: 'cuento', slug: post.id },
+    props: post,
+  }));
+
+  // Mapeamos los poemas
+  const rutasPoemas = poemas.map(post => ({
+    params: { collections: 'poema', slug: post.id },
+    props: post,
+  }));
+
+  // Unimos ambos arrays en uno solo
+  return [...rutasCuentos, ...rutasPoemas];
+}
+
+// 2. Obtener los datos de la publicación actual mediante props
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<BlogPost {...post.data}>
+	<Content />
+</BlogPost>

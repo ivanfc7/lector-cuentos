@@ -1,15 +1,9 @@
 ---
 const today = new Date();
+import styles from '../styles/footer.css'
 ---
 
-<footer>
+<footer class={styles}>
 	&copy; {today.getFullYear()} Ivan F. Calle.
 </footer>
-<style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-</style>
+

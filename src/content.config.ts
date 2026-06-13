@@ -3,18 +3,28 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 
 const cuento = defineCollection({
-	// Load Markdown and MDX files in the `src/content/blog/` directory.
-	loader: glob({ base: './src/content/cuentos', pattern: '**/*.{md,mdx}' }),
-	// Type-check frontmatter using a schema
+	loader: glob({ base: './src/content/cuento', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
 			description: z.string(),
-			// Transform string to Date object
 			pubDate: z.coerce.date(),
+			pubIn: z.string(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
 		}),
 });
 
-export const collections = { cuento };
+const poema = defineCollection({
+	loader: glob({ base: './src/content/poema', pattern: '**/*.{md,mdx}' }),
+	schema: ({ image }) =>
+		z.object({
+			title: z.string(),
+			description: z.string(),
+			pubDate: z.coerce.date(),
+			pubIn: z.string(),
+			updatedDate: z.coerce.date().optional(),
+			heroImage: z.optional(image()),
+		}),
+});
+export const collections = { cuento, poema };
