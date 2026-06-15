@@ -1,12 +1,12 @@
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
-import styles from '../styles/header.css';
+import '../styles/header.css';
 ---
 
-<header class={styles}>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+<header class="main-header">
+	<nav class="nav-container">
+		<h2 class="logo"><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Portada</HeaderLink>
 			<HeaderLink href="/cuento">Cuentos</HeaderLink>

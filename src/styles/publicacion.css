@@ -1,37 +1,211 @@
-main {
-    width: calc(100% - 2em);
+/* Contenedor principal de lectura */
+.lectura-container {
     max-width: 100%;
-    margin: 0;
+    background-color: var(--bg-color);
+    padding: 2rem 1rem 5rem 1rem;
 }
-.hero-image {
-    width: 100%;
-}
-.hero-image img {
-    display: block;
+
+.articulo-literario {
+    max-width: 960px;
     margin: 0 auto;
-    border-radius: 12px;
-    box-shadow: var(--box-shadow);
 }
-.prose {
-    width: 720px;
-    max-width: calc(100% - 2em);
-    margin: auto;
-    padding: 1em;
-    color: rgb(var(--gray-dark));
+
+/* Imagen de cabecera principal */
+.hero-image {
+    width: 80%;
+    max-height: 480px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    margin-left: auto;
+    margin-right: auto;
 }
-.title {
-    margin-bottom: 1em;
-    padding: 1em 0;
+
+.lectura-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* El bloque de texto: se estrecha para máxima comodidad de lectura */
+.cuerpo-prosa {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* Cabecera del texto */
+.lectura-header {
+    margin-bottom: 2.5rem;
     text-align: center;
-    line-height: 1;
 }
-.title h1 {
-    margin: 0 0 0.5em 0;
+
+.meta-fecha {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
 }
-.date {
-    margin-bottom: 0.5em;
-    color: rgb(var(--gray));
+
+.fecha-actualizacion {
+    color: var(--text-muted);
+    text-transform: none;
+    margin-left: 0.5rem;
 }
-.last-updated-on {
+
+.lectura-titulo {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--text-main);
+    line-height: 1.2;
+    margin: 0 0 1rem 0;
+    font-weight: 700;
+}
+
+.lectura-sinopsis {
+    font-family: var(--font-serif);
     font-style: italic;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.divisor-lectura {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+    margin: 2rem 0;
+}
+
+/* --- ESTILOS DEL CONTENIDO MARKDOWN (<slot />) --- */
+.contenido-markdown-cuento {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    line-height: 1.85;   /* Interlineado amplio para que las líneas respiren */
+    color: var(--text-main);
+}
+
+/* Espaciado de párrafos */
+.contenido-markdown-cuento p {
+    margin-top: 0;
+    margin-bottom: 1.8rem;
+    text-align: justify; 
+}
+
+/* Estilo poético para la primera letra de un cuento (Capitular) */
+.contenido-markdown-cuento>p:first-of-type::first-letter {
+    font-size: 3.5rem;
+    float: left;
+    margin-top: 0.6rem;
+    margin-right: 0.6rem;
+    padding: 0 0.2rem;
+    font-weight: bold;
+    line-height: 0.8;
+    color: var(--accent);
+    font-family: var(--font-serif);
+}
+
+/* --- ESTILOS PARA POEMAS (LÍRICA) --- */
+.contenido-markdown-poema {
+    text-align: center;              
+    max-width: 440px;              
+    margin: 0 auto;                /* Centra el bloque del poema en la pantalla */
+    font-style: italic;            /* Un toque clásico italiano para la poesía */
+}
+  
+  /* Cada estrofa (párrafo de Markdown) */
+.contenido-markdown-poema p {
+    margin-top: 0;
+    font-size: 1.10rem;
+    margin-bottom: 2.2rem;         /* Espacio amplio entre estrofas */
+    line-height: 1.6;              /* Versos un poco más juntos para que se sientan como un bloque */
+}
+  
+  /* Saltos de línea internos de la estrofa (<br>) */
+.contenido-markdown-poema br {
+    content: "";
+    margin-bottom: 0.5rem;         /* Controla el micro-espacio entre versos */
+    display: block;
+}
+
+/* Notas de procedencia / Revista digital */
+.nota-publicacion {
+    background-color: rgba(140, 98, 57, 0.05);
+    border-left: 3px solid var(--accent);
+    padding: 1.2rem 1.5rem;
+    margin: 4rem 0 3rem 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.nota-publicacion p {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.nota-publicacion a {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nota-publicacion a:hover {
+    text-decoration: underline;
+}
+
+/* --- BOTÓN DE RETORNO CONTEXTUAL --- */
+.navegacion-retorno {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.enlace-retorno {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+}
+
+.enlace-retorno .flecha {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+/* Pequeña animación interactiva al pasar el cursor */
+.enlace-retorno:hover {
+    color: var(--text-main);
+}
+
+.enlace-retorno:hover .flecha {
+    transform: translateX(-4px);  /* Mueve la flechita a la izquierda */
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .lectura-titulo {
+        font-size: 2.2rem;
+    }
+
+    .contenido-markdown-cuento {
+        font-size: 1.15rem;  
+        line-height: 1.75;
+    }
+
+    .hero-image {
+        width: 90%;
+        margin-bottom: 2rem;
+        max-height: 300px;
+    }
 }

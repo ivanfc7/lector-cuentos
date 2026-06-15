@@ -5,11 +5,16 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
-import styles from '../styles/publicacion.css';
+import '../styles/publicacion.css';
 
 type Props = CollectionEntry<'cuento'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, pubIn, pubLink, heroImage } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const esPoema = pathname.includes('/poema');
+const textoRegreso = esPoema ? 'Ver mas poemas' : 'Ver mas cuentos';
+const linkRegreso = esPoema ? '/poema' : '/cuento';
 ---
 
 <html lang="en">
@@ -18,27 +23,41 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 	</head>
 	<body>
 		<Header />
-		<main class={styles}>
-			<article>
+		<main class="lectura-container">
+			<article class="articulo-literario">
 				<div class="hero-image">
-					{heroImage && <Image width={720} height={410} src={heroImage} alt="" />}
+					{heroImage && <Image src={heroImage} alt={`Ilustracion para ${title}`} class="lectura-hero-img"/>}
 				</div>
 				<div class="prose">
-					<div class="title">
-						<div class="date">
+					<header class="lectura-header">
+						<h1 class="lectura-titulo">{title}</h1>
+						<div class="meta-fecha">
 							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
+							{updatedDate && (
+								<span class="fecha-actualizacion">
+									• (Actualizado el <FormattedDate date={updatedDate} />)
+								</span>
+							)}
 						</div>
-						<h4>{title}</h4>
-						<hr />
+						{description && <p class="lectura-sinopsis">{description}</p>}
+						<hr class="divisor-lectura" />
+					</header>
+					<div class={esPoema? "contenido-markdown-poema":"contenido-markdown-cuento"}>
+						<slot />
 					</div>
-					<slot />
+					{pubIn && pubLink && (
+						<div class="nota-publicacion">
+							<p>
+								Encuentra la publicacion original en 
+								<a href={pubLink} target="_blank" rel="noopener noreferrer">{pubIn}</a>.
+							</p>
+						</div>
+					)}
+					<nav class="navegacion-retorno">
+						<a href={linkRegreso} class="enlace-retorno">
+							<span class="flecha">&larr;</span> {textoRegreso}
+						</a>
+					</nav>
 				</div>
 			</article>
 		</main>

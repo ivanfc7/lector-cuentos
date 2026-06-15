@@ -7,7 +7,7 @@ import Footer from '../../components/Footer.astro';
 import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
-import styles from '../../styles/collections.css';
+import '../../styles/collections.css';
 
 export const getStaticPaths = (() => {
     return [
@@ -29,21 +29,26 @@ const posts = (await getCollection(collections as 'cuento' | 'poema')).sort(
 	</head>
 	<body>
 		<Header />
-		<main class={styles}>
-			<section>
-				<ul>
+		<main class="site-colecciones">
+			<section class="lista-escritos-container">
+				<ul class="grid-escritos">
 					{posts.map((post) => (
-						<li>
-							<a href={`/${collections}/${post.id}/`}>
+						<li class="tarjeta-escrito">
+							<a href={`/${collections}/${post.id}/`} class="enlace-tarjeta">
 								{post.data.heroImage && (
-									<Image width={520} height={320} src={post.data.heroImage} alt="Ilustracion" />
+									<div class="imagen-escrito">
+										<Image width={520} height={320} src={post.data.heroImage} alt="Ilustracion" />
+									</div>
 								)}
-								<h4 class="title">{post.data.title}</h4>
-								<p class="date">
-									<FormattedDate date={post.data.pubDate} />
-								</p>
+								<div class="contenido-tarjeta">
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+									<h2 class="title">{post.data.title}</h2>
+									<p class="descripcion">{post.data.description}</p>
+									<span class="leer-mas">Leer &rarr;</span>
+								</div>
 							</a>
-							<p>{post.data.description}</p>
 						</li>
 						))
 					}
