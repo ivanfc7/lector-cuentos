@@ -1,140 +1,140 @@
 /* Contenedor principal */
 .site-colecciones {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 2rem;
-    background-color: var(--bg-color);
-    min-height: 70vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: var(--bg-color);
+  min-height: 70vh;
 }
 
 /* La cuadrícula (Grid) */
 .grid-escritos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Cada tarjeta individual */
-  .tarjeta-escrito {
-    background-color: var(--bg-card);
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    display: flex;
-  }
-  
-  .enlace-tarjeta {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  /* Hover de la tarjeta */
-  .tarjeta-escrito:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(140, 98, 57, 0.08);
-    border-color: rgba(140, 98, 57, 0.15);
-  }
-  
-  /* Contenedor de la Imagen */
-  .imagen-tarjeta {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    background-color: #f0ebe1;
-  }
-  
-  .imagen-post {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
-  
-  /* Efecto zoom sutil en la foto al pasar el cursor */
-  .tarjeta-escrito:hover .imagen-post {
-    transform: scale(1.04);
-  }
-  
-  /* Contenido de texto dentro de la tarjeta */
-  .contenido-tarjeta {
-    padding: 1.8rem;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    flex-grow: 1; /* Empuja el botón "Leer más" siempre al fondo */
-  }
-  
-  /* La fecha */
-  .contenido-tarjeta .date {
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0 0 0.8rem 0;
-  }
-  
-  /* Título del cuento/poema */
-  .contenido-tarjeta .title {
-    font-family: var(--font-serif);
-    font-size: 1.4rem;
-    color: var(--text-main);
-    margin: 0 0 1rem 0;
-    line-height: 1.3;
-  }
-  
-  /* Extracto o Descripción corta */
-  .contenido-tarjeta .descripcion {
-    font-family: var(--font-sans);
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin: 0 0 1.5rem 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-  
-  /* Indicador de "Leer más" */
-  .leer-mas {
-    font-family: var(--font-sans);
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--text-main);
-    margin-top: auto; 
-    transition: color 0.2s ease, transform 0.2s ease;
-    display: inline-block;
-  }
-  
-  .tarjeta-escrito:hover .leer-mas {
-    color: var(--accent);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada tarjeta individual */
+.tarjeta-escrito {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+}
+
+.enlace-tarjeta {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Hover de la tarjeta */
+.tarjeta-escrito:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(140, 98, 57, 0.08);
+  border-color: rgba(140, 98, 57, 0.15);
+}
+
+/* Contenedor de la Imagen */
+.imagen-tarjeta {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f0ebe1;
+}
+
+.imagen-post {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Efecto zoom sutil en la foto al pasar el cursor */
+.tarjeta-escrito:hover .imagen-post {
+  transform: scale(1.04);
+}
+
+/* Contenido de texto dentro de la tarjeta */
+.contenido-tarjeta {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  flex-grow: 1; /* Empuja el botón "Leer más" siempre al fondo */
+}
+
+/* La fecha */
+.contenido-tarjeta .date {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 0.8rem 0;
+}
+
+/* Título del cuento/poema */
+.contenido-tarjeta .title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--text-main);
+  margin: 0 0 1rem 0;
+  line-height: 1.3;
+}
+
+/* Extracto o Descripción corta */
+.contenido-tarjeta .descripcion {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Indicador de "Leer más" */
+.leer-mas {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: auto;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.tarjeta-escrito:hover .leer-mas {
+  color: var(--accent);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .site-colecciones {
+    padding: 2rem 1rem;
   }
 
-  /* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-    .site-colecciones {
-      padding: 2rem 1rem;
-    }
-  
-    .coleccion-titulo {
-      font-size: 2.2rem;
-    }
-  
-    .grid-escritos {
-      gap: 1.5rem;
-      grid-template-columns: 1fr; /* Una sola columna en celulares */
-    }
-    
-    .imagen-contenedor {
-      height: 180px; 
-    }
+  .coleccion-titulo {
+    font-size: 2.2rem;
   }
+
+  .grid-escritos {
+    gap: 1.5rem;
+    grid-template-columns: 1fr;/* Una sola columna en celulares */
+  }
+
+  .imagen-contenedor {
+    height: 180px;
+  }
+}

@@ -1,26 +1,35 @@
 /* Header general */
 .main-header {
-    background-color: rgba(251, 249, 246, 0.85); /* Fondo crema con ligera transparencia */
-    backdrop-filter: blur(8px); /* Efecto de desenfoque moderno */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* REEMPLAZADO: Ahora usa la variable translúcida del tema actual */
+    background-color: var(--bg-header); 
+    backdrop-filter: blur(8px);
+    /* REEMPLAZADO: Borde adaptativo (oscuro en claro, claro en oscuro) */
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 100;
     padding: 1.5rem 2rem;
-    transition: all 0.3s ease;
-}
+    /* Agregamos background-color a la transición para que cambie suavemente */
+    transition: background-color 0.3s ease, border-color 0.3s ease, all 0.3s ease;
+  }
 
 /* Contenedor de navegación */
 .nav-container {
-    max-width: 1100px;
+    max-width: 1200px; /* Ampliamos un poco el espacio total */
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     gap: 1.5rem;
-}
-
+  }
+  
+  /* Contenedor de preferencias (Temas / Idiomas) */
+  .nav-preferences {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Espacio por si pones el selector de idiomas al lado */
+  }
 /* El logo / Nombre del sitio */
 .logo {
     margin: 0;
@@ -95,6 +104,9 @@
     background-color: var(--accent);
 }
 
+#icono-theme{
+    color: var(--border-color);
+}
 /* --- RESPONSIVE / MEDIA QUERIES --- */
 @media (max-width: 600px) {
     .main-header {
@@ -102,17 +114,23 @@
     }
 
     .nav-container {
-        flex-direction: column;
-        gap: 0.8rem;
+        flex-direction: column; /* Apila los elementos en vertical */
+        gap: 1rem;
         text-align: center;
-    }
-
+      }
+    
+      .internal-links {
+        justify-content: center;
+        gap: 1.5rem;
+      }
+    
+      .nav-preferences {
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.5rem;
+      }
     .logo {
         font-size: 1.4rem;
-    }
-
-    .internal-links {
-        gap: 1.5rem;
     }
 
     .internal-links a {

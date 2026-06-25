@@ -110,6 +110,7 @@
 
 /* --- ESTILOS PARA POEMAS (LÍRICA) --- */
 .contenido-markdown-poema {
+    color: var(--text-main);
     text-align: center;              
     max-width: 440px;              
     margin: 0 auto;                /* Centra el bloque del poema en la pantalla */

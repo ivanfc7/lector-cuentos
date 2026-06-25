@@ -1,8 +1,38 @@
-:root {
+:root{
     --bg-color: #fbf9f6; /* Un blanco hueso/crema muy suave, como papel */
     --text-main: #1a1a1a; /* Casi negro, ideal para lectura prolongada */
     --text-muted: #666666; /* Gris sutil para enlaces secundarios */
     --accent: #8c6239; /* Tono marrón editorial / bronce para detalles */
     --font-serif: 'Playfair Display', Georgia, serif; /* Elegancia para títulos */
     --font-sans: 'Inter', system-ui, sans-serif; /* Limpieza para navegación */
+    --bg-header: rgba(251, 249, 246, 0.85); /* Crema translúcido */
+    --bg-footer: #f5f2eb;          /* Crema un poco más oscuro */
+}
+
+/* --- TEMA OSCURO --- */
+:root[data-theme="dark"] {
+    --bg-color: #121212;         
+    --bg-card: #1e1e1e;
+    --bg-header: rgba(18, 18, 18, 0.85); 
+    --bg-footer: #0a0a0a;         
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --accent: #d4a373;
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+  
+  /* --- TEMA SEPIA --- */
+:root[data-theme="sepia"] {
+    --bg-color: #f4ecd8;
+    --bg-card: #fdf6e3;
+    --bg-header: rgba(244, 236, 216, 0.85); 
+    --bg-footer: #e9dfc6;         
+    --text-main: #433422;
+    --text-muted: #7c6a52;
+    --accent: #b57614;
+    --border-color: rgba(67, 52, 34, 0.08);
+}
+
+body{
+  margin: auto;
 }
