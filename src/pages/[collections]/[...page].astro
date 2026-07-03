@@ -1,0 +1,93 @@
+---
+import { getCollection } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { Image } from 'astro:assets';
+import '../../styles/collections.css';
+
+export const getStaticPaths = (async ({ paginate }) => {
+    // Traemos ambas colecciones por separado
+    const cuentos = await getCollection('cuento');
+    const poemas = await getCollection('poema');
+
+    // Las ordenamos cronológicamente (más recientes primero)
+    const cuentosOrdenados = cuentos.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    const poemasOrdenados = poemas.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+    // Retornamos la paginación combinada de ambas carpetas
+    return [
+        ...paginate(cuentosOrdenados, {
+            params: { collections: 'cuento' },
+            pageSize: 6 
+        }),
+        ...paginate(poemasOrdenados, {
+            params: { collections: 'poema' },
+            pageSize: 6 
+        }),
+    ];
+}) satisfies GetStaticPaths;
+
+// 2. Fuera de la función, recuperamos los datos específicos de la página actual que Astro nos envía
+const { collections } = Astro.params;
+const { page } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={`${SITE_TITLE} - ${collections} (Página ${page.currentPage})`} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main class="site-colecciones">
+			<section class="lista-escritos-container">
+				<ul class="grid-escritos">
+					{page.data.map((post) => (
+						<li class="tarjeta-escrito">
+							<a href={`/${collections}/${post.id}/`} class="enlace-tarjeta">
+								{post.data.heroImage && (
+									<div class="imagen-escrito">
+										<Image width={520} height={320} src={post.data.heroImage} alt="Ilustracion" />
+									</div>
+								)}
+								<div class="contenido-tarjeta">
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+									<h2 class="title">{post.data.title}</h2>
+									<p class="descripcion">{post.data.description}</p>
+									<span class="leer-mas">Leer &rarr;</span>
+								</div>
+							</a>
+						</li>
+					))}
+				</ul>
+
+				{(page.url.prev || page.url.next) && (
+					<nav class="paginacion-container" aria-label="Navegación de páginas">
+						{page.url.prev ? (
+							<a href={page.url.prev} class="btn-paginacion">&larr; Anteriores</a>
+						) : (
+							<span class="btn-paginacion disabled">&larr; Anteriores</span>
+						)}
+
+						<span class="info-paginas">
+							{page.currentPage} / {page.lastPage}
+						</span>
+
+						{page.url.next ? (
+							<a href={page.url.next} class="btn-paginacion">Siguientes &rarr;</a>
+						) : (
+							<span class="btn-paginacion disabled">Siguientes &rarr;</span>
+						)}
+					</nav>
+				)}
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

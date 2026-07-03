@@ -89,7 +89,7 @@
   /* --- Ajuste fino para pantallas móviles --- */
   @media (max-width: 768px) {
     .dropdown-menu {
-      left: 0; /* En móvil nos aseguramos de que abra hacia el centro */
-      top: 130%;
+      right: 0; /* En móvil nos aseguramos de que abra hacia el centro */
+      top: 110%;
     }
   }
