@@ -1,2 +1,2 @@
-export const SITE_TITLE = 'Mi cajón de escritos';
-export const SITE_DESCRIPTION = 'La literatura es el espacio que invita al ser humano a sumergirse en nuevos mundos, vidas inimaginables, aventuras inconmensurables y sobre todo a conocer los sentimientos más profundos del alma humana. A través de cuentos y poemas, este espacio intente llevar a usted lector, aquellos pensares que han sido plasmados en hojas digitales y que durante un tiempo han permanecido en el cajón de los escritos.';
+export const SITE_TITLE = 'Ivan Flores Calle | Escritos Literarios';
+export const SITE_DESCRIPTION = 'Portafolio literario de Ivan Flores Calle. Descubre una colección de cuentos y poemas.';
