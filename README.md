@@ -1,14 +1,17 @@
-# Astro Starter Kit: Blog
+# Escritos Literarios: Blog literario
 
 Caracteristicas:
 
-- ✅ Minimal styling (make it your own!)
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Markdown & MDX support
+- ✅ Estilo minimalista
+- ✅ SEO-amigable con URLs canonicas
+- ✅ Soporte Markdown & MDX
 
-## 🚀 Project Structure
+## 🚀 Estructura del proyecto
 
-Inside of your Astro project, you'll see the following folders and files:
+En la primera fase se carga el contenido de los cuentos y poemas junto a sus imagenes desde ñas carpetas:
+- assets/ilustraciones-escritos
+- content/cuento
+- content/poema
 
 ```text
 ├── public/
