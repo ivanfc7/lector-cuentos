@@ -27,5 +27,5 @@ pnpm-debug.log*
 .vscode/
 
 # local development files
-src/content/
-src/assets/ilustraciones-escritos/
+# src/content/
+# src/assets/ilustraciones-escritos/
