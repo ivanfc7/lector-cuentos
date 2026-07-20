@@ -1,10 +1,10 @@
 ---
 title: 'Carta a un Ángel'
-description: 'Carta a un Ángel es un cuento navideño publicado una primera versión en la revista Elipsis Digital en diciembre del 2025. Tratandose del primer publicado del autor, la primera versión presenta leves diferencias en extension comparada a la actual. El cuento intenta presentar una vision del protegonista de su vida turbulenta en el año a una vision humana de lo que representaba la Navidad cuando este era un niño.'
+description: 'Carta a un Ángel es un cuento navideño publicado una primera versión en la revista Elipsis Digital en diciembre del 2025. Tratándose del primer publicado del autor, la primera versión presenta leves diferencias en extensión comparada a la actual. El cuento,  en formato epistolar,  intenta presentar una visión del protagonista de su vida turbulenta en el año a una visión humana de lo que representaba la Navidad cuando este era un niño.'
 pubDate: 'Dec 25 2025'
 pubIn: 'Elipsis Digital'
 pubLink: 'https://www.facebook.com/share/p/1D4fTGVtFY/'
-heroImage: '../../assets/ilustraciones-escritos/cuento-img-carta-a-un-angel.jpg'
+heroImage: '../../assets/ilustraciones-escritos/cuento-img-1.jpg'
 ---
 
 Diciembre.

@@ -1,11 +1,11 @@
 ---
 title: 'El Tiempo Perfecto'
 description: 'El Tiempo Perfecto es un poema publicado el 15 de enero de 2026 en la revista digital Narrativa. 
-El poema aborda en pocas palabras el concepto abstracto del tiempo en especial de aquello que se tienda a llamar un tiempo perfecto en la vida.'
-pubDate: 'Jan 25 2026'
+El poema aborda en pocas palabras el concepto abstracto del tiempo, en especial de aquello que se tienda a llamar un tiempo perfecto en la vida.'
+pubDate: 'Jan 15 2026'
 pubIn: 'Revista Narrativa'
 pubLink: 'https://www.facebook.com/share/p/1CCDkjgtym/'
-heroImage: '../../assets/ilustraciones-escritos/poema-img-el-tiempo-perfecto.jpg'
+heroImage: '../../assets/ilustraciones-escritos/poema-img-2.jpg'
 ---
 
 El tiempo perfecto,
