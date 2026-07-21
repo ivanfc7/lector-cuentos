@@ -22,6 +22,7 @@ El contenido de los cuentos y poemas junto a sus imagenes desde las carpetas:
 │   ├── content/
 │   ├── layouts/
 │   └── pages/
+|   └── styles/
 ├── astro.config.mjs
 ├── README.md
 ├── package.json

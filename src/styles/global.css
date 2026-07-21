@@ -1,5 +1,6 @@
 :root{
-    --bg-color: #fbf9f6; /* Un blanco hueso/crema muy suave, como papel */
+    --bg-color: #fbf9f6; 
+    --bg-card: #fbf9f6; /* Un blanco hueso/crema muy suave, como papel */
     --text-main: #1a1a1a; /* Casi negro, ideal para lectura prolongada */
     --text-muted: #666666; /* Gris sutil para enlaces secundarios */
     --accent: #8c6239; /* Tono marrón editorial / bronce para detalles */
