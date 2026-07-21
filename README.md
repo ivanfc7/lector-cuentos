@@ -5,10 +5,11 @@ Caracteristicas:
 - ✅ Estilo minimalista
 - ✅ SEO-amigable con URLs canonicas
 - ✅ Soporte Markdown & MDX
+- ✅ Realizado en Astro 
 
-## 🚀 Estructura del proyecto
+## Estructura del proyecto
 
-En la primera fase se carga el contenido de los cuentos y poemas junto a sus imagenes desde ñas carpetas:
+El contenido de los cuentos y poemas junto a sus imagenes desde las carpetas:
 - assets/ilustraciones-escritos
 - content/cuento
 - content/poema
@@ -26,3 +27,8 @@ En la primera fase se carga el contenido de los cuentos y poemas junto a sus ima
 ├── package.json
 └── tsconfig.json
 ```
+## 🚀 Despliegue del sitio
+
+Despliegue realizado en Vercel
+
+[Escritos Literarios](https://escritos-literarios.vercel.app/) 
