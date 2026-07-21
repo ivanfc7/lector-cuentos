@@ -10,21 +10,21 @@ heroImage: '../../assets/ilustraciones-escritos/poema-img-1.jpg'
 
 Sola en el vasto y negruzco firmamento.
 Ser única ha sido mi bendición,
-En ocasiones, mi lamento,
+en ocasiones, mi lamento,
 
 Tengo la dicha de albergar vida,
-Del alba al ocaso,
-Del anochecer al amanecer.
+del alba al ocaso,
+del anochecer al amanecer.
 
 Durante milenios presencie 
-Ese eco agridulce de la vida;
-Dulce por su esencia misma,
-Agrio por su empuje hacia la entropía.
+ese eco agridulce de la vida;
+dulce por su esencia misma,
+agrio por su empuje hacia la entropía.
 
 Ahí es cuando nace el infortunio,
-Donde la firma humana en el tiempo,
-Donde su constante progreso
-Es excelso y a la vez turbulento.
+donde la firma humana en el tiempo,
+donde su constante progreso,
+es excelso y a la vez turbulento.
 Donde cada intervención me traza heridas, 
-Donde sostener sus vidas 
-Empezó a disminuir la mía.
+donde sostener sus vidas 
+empezó a disminuir la mía.

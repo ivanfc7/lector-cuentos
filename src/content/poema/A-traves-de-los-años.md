@@ -7,18 +7,18 @@ pubLink: 'https://www.facebook.com/share/p/1EiYNU3p39/'
 heroImage: '../../assets/ilustraciones-escritos/poema-img-3.jpg'
 ---
 Existieron silencios;
-Acompañados del recuerdo.
+acompañados del recuerdo.
 Cada paso en su propio camino,
-En su propio tiempo.
+en su propio tiempo.
 
 Cada corazón a su ritmo latía, 
-Momentos que a través de los años sucedían 
-Un eco silencioso y observador de aquellos momentos
-Silencios que cedían ante cada reencuentro.
+momentos que a través de los años sucedían.
+Un eco silencioso y observador de aquellos momentos,
+silencios que cedían ante cada reencuentro.
 
 Ahí donde el alma atesoraba
-Un nuevo capítulo en el recuerdo.
+un nuevo capítulo en el recuerdo.
 Ahí donde mi ser se siente agradecido,
-Donde en melancolía y nostalgia me veía sumergido.
+donde en melancolía y nostalgia me veía sumergido.
 
 

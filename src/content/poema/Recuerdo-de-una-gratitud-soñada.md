@@ -8,33 +8,33 @@ pubLink: 'https://www.facebook.com/share/p/18e3i9LW45/'
 heroImage: '../../assets/ilustraciones-escritos/poema-img-4.jpg'
 ---
 
-A veces siento que me mantuve indiferente
+A veces siento que me mantuve indiferente.
 Pensar que no encontraba el momento o las palabras,
-Para agradecerte
-Quizás tampoco en los hechos, estuve presente
+para agradecerte.
+Quizás tampoco en los hechos, estuve presente.
 
-En silencio, recuerdo cada instante compartido
-Momentos escritos en mi memoria;
-Momentos con bellas emociones
-Transcurren los días, y yo aquí
-Recordándolo todo, en compañía de canciones.
+En silencio, recuerdo cada instante compartido,
+momentos escritos en mi memoria;
+momentos con bellas emociones,
+transcurren los días, y yo aquí,
+recordándolo todo, en compañía de canciones.
 
 Pensar que cada detalle tuyo 
-Quedó guardado en mi corazón. 
+quedó guardado en mi corazón. 
 Acudía a tus palabras
-Cuando sentía nublar mi razón.
+cuando sentía nublar mi razón.
 Nunca pensé encontrar en ti tanta comprensión.
 
 A veces solo quiero estar a tu lado
-Escuchando lo que tengas que contar
-Cualquier palabra, cualquier historia
-Me mantengo en silencio para tu voz poder escuchar.
+escuchando lo que tengas que contar,
+cualquier palabra, cualquier historia;
+me mantengo en silencio para tu voz poder escuchar.
 
 Ahora voy anhelando
-Ocasiones para ofrecerte mi mano
-Un apoyo brindarte
-Y así, quizá, compensarte.
-Esa bella amistad que tú me obsequiaste. 
+ocasiones para ofrecerte mi mano,
+un apoyo brindarte
+y así quizá compensarte.
+esa bella amistad que tú me obsequiaste. 
 
 
 

@@ -13,7 +13,6 @@ es aquel que es fugaz
 y al mismo tiempo,
 puede sentirse eterno.
 
-
 Aquel donde una sola mirada,
 un solo respiro,
 llevan al alma
